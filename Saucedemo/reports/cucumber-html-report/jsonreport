@@ -1,0 +1,16 @@
+[
+  {
+    "line": 2,
+    "name": "Saucedemo Website",
+    "description": "",
+    "id": "saucedemo-website",
+    "keyword": "Feature",
+    "uri": "src/main/resources/feature/saucedemo.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Saucedemo"
+      }
+    ]
+  }
+]
