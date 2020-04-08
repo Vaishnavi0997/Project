@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excelllogin {
-	
+
 	public Object[][] getData() throws IOException {
 		Object[][] testData = null;
 		// Opening the Excel File
@@ -40,7 +40,7 @@ public class Excelllogin {
 	}
 
 //To read and return username
-	public String excel_username(int a) throws IOException {
+	public String excel_Username(int a) throws IOException {
 
 		FileInputStream fil = new FileInputStream(new File("Details.xlsx"));
 		XSSFWorkbook workbook = new XSSFWorkbook(fil);
@@ -50,13 +50,13 @@ public class Excelllogin {
 
 		XSSFRow row = sheet.getRow(a);
 		XSSFCell cell = row.getCell(0);
-		String un = cell.getStringCellValue();
+		String username1 = cell.getStringCellValue();
 
-		return un;
+		return username1;
 	}
 
 	// TO read and return password
-	public String excel_password(int b) throws IOException {
+	public String excel_Password(int b) throws IOException {
 
 		FileInputStream fil = new FileInputStream(new File("Details.xlsx"));
 		XSSFWorkbook workbook = new XSSFWorkbook(fil);
@@ -66,13 +66,9 @@ public class Excelllogin {
 
 		XSSFRow row = sheet.getRow(b);
 		XSSFCell cell1 = row.getCell(1);
-		String pwd = cell1.getStringCellValue();
+		String password1 = cell1.getStringCellValue();
 
-		return pwd;
+		return password1;
 	}
-
-
-	
-	
 
 }

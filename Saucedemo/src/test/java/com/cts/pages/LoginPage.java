@@ -7,22 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.cts.Baseclass.BasePage;
 
+public class LoginPage extends BasePage {
 
-public class LoginPage extends BasePage{
-	
-	WebDriver driver=null;
-	@FindBy(id="user-name")
+	WebDriver driver = null;
+	@FindBy(id = "user-name")
 	WebElement username;
-	@FindBy(id="password")
+	@FindBy(id = "password")
 	WebElement password;
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement loginbtn;
-	
+	@FindBy(xpath = "//input[@type='submit']")
+	WebElement loginbutton;
+
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 
 	}
-	
 
 	public void username(String username) {
 		this.username.sendKeys(username);
@@ -33,10 +31,9 @@ public class LoginPage extends BasePage{
 		this.password.sendKeys(password);
 	}
 
-	public void loginbtn() {
+	public void loginButton() {
 
-		loginbtn.click();
+		loginbutton.click();
 	}
-
 
 }
