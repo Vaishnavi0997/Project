@@ -9,7 +9,6 @@ import com.cts.Baseclass.BasePage;
 
 public class LoginPage extends BasePage {
 
-	WebDriver driver = null;
 	@FindBy(id = "user-name")
 	WebElement username;
 	@FindBy(id = "password")

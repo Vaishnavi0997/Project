@@ -9,14 +9,12 @@ import com.cts.Baseclass.BasePage;
 
 public class LogoutPage extends BasePage {
 	
-	WebDriver driver=null;
 	@FindBy(xpath="//*[@id=\'menu_button_container\']/div/div[3]/div/button")
 	WebElement menu;
 	@FindBy(id="logout_sidebar_link")
 	WebElement logout;
 	public LogoutPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver =driver;
 		
 	}
 	public void openMenu() {

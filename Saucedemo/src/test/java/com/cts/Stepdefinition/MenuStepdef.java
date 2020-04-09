@@ -10,6 +10,7 @@ import com.cts.pages.MenuPage;
 import com.cts.utility.Excelllogin;
 import com.cts.utility.Screenshot;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,8 +23,8 @@ public class MenuStepdef extends BasePage {
 	LoginPage loginpage = null;
 	MenuPage menu;
 
-	@Given("^TC05 the user launch the chrome application$")
-	public void tc05_the_user_launch_the_chrome_application() throws Throwable {
+	@Given("^TC05 the user launch the browser$")
+	public void the_user_launch_the_browser() throws Throwable {
 		driver = launchApp("firefox");
 		loginpage = new LoginPage(driver);
 		menu = new MenuPage(driver);
@@ -56,20 +57,19 @@ public class MenuStepdef extends BasePage {
 		menu.openMenu();
 		logger.info("Menu is opened");
 	}
-	
-	@Then("^TC05 user click on About and select Platform$")
-    public void tc05_user_click_on_about_and_select_platform() throws Throwable {
-		menu.clickAbout();
-    }
 
-    @Then("^Tc05 in platform user select Selenium$")
-    public void tc05_in_platform_user_select_selenium() throws Throwable {
-        menu.selectSelenium();
-        Screenshot util = new Screenshot(driver);
+	@And("^TC05 user click on About and select Platform$")
+	public void tc05_user_click_on_about_and_select_platform() throws Throwable {
+		menu.clickAbout();
+	}
+
+	@Then("^Tc05 in platform user select Selenium$")
+	public void tc05_in_platform_user_select_selenium() throws Throwable {
+		menu.selectSelenium();
+		Screenshot util = new Screenshot(driver);
 		util.takeSnapShot("src/test/resources/Screenshot/Menu.png");
 		logger.error("browser is closed");
 		driver.close();
-    }
-
+	}
 
 }

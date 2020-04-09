@@ -9,7 +9,6 @@ import com.cts.Baseclass.BasePage;
 
 public class MenuPage extends BasePage {
 
-	WebDriver driver = null;
 	@FindBy(xpath = "//*[@id=\'menu_button_container\']/div/div[3]/div/button")
 	WebElement menu;
 	@FindBy(id = "about_sidebar_link")
@@ -21,7 +20,6 @@ public class MenuPage extends BasePage {
 
 	public MenuPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver = driver;
 
 	}
 

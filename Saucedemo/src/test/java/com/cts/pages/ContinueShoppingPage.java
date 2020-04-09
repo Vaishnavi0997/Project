@@ -1,5 +1,7 @@
 package com.cts.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,10 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.cts.Baseclass.BasePage;
 
-public class VerifyPage extends BasePage {
-
+public class ContinueShoppingPage extends BasePage{
 	WebDriver driver = null;
-	@FindBy(xpath = "/html/body/div/div[2]/div[2]/div/div[2]/div/div[6]/div[2]/a/div")
+	@FindBy(xpath = "//*[@id=\'item_3_title_link\']/div")
 	WebElement selectproduct;
 	@FindBy(xpath = "//*[@id=\'inventory_item_container\']/div/div/div/button")
 	WebElement addcart;
@@ -23,7 +24,7 @@ public class VerifyPage extends BasePage {
 	@FindBy(linkText = "CONTINUE SHOPPING")
 	WebElement continueshopping;
 
-	public VerifyPage(WebDriver driver) {
+	public ContinueShoppingPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 
@@ -38,10 +39,15 @@ public class VerifyPage extends BasePage {
 	}
 
 	public void verify() {
+		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 		cart.click();
+		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 		// to continue shopping
 		continueshopping.click();
+		
 
 	}
+
+
 
 }

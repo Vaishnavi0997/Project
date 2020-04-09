@@ -22,8 +22,8 @@ public class SelectProductStepdef extends BasePage {
 	LoginPage loginpage = null;
 	SelectProductPage selectproduct;
 
-	@Given("^TC03 the user launch the chrome application$")
-	public void tc03_the_user_launch_the_chrome_application() throws Throwable {
+	@Given("^TC03 the user launch the browser$")
+	public void the_user_launch_the_browser() throws Throwable {
 		driver = launchApp("chrome");
 		loginpage = new LoginPage(driver);
 		selectproduct = new SelectProductPage(driver);

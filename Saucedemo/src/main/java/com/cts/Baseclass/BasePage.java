@@ -30,7 +30,7 @@ public class BasePage {
 
 	public void quit() {
 
-		driver.quit();
+		driver.close();
 	}
 
 }

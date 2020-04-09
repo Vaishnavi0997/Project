@@ -17,15 +17,14 @@ public class LoginStepdef extends BasePage {
 
 	final static Logger logger = LogManager.getLogger(LoginPage.class);
 	WebDriver driver = null;
-	Excelllogin data = new Excelllogin();
+	Excelllogin excellogin = new Excelllogin();
 	LoginPage loginpage = null;
 
-	@Given("^the user launch the chrome application$")
-	public void the_user_launch_the_chrome_application() throws Throwable {
+	@Given("^the user launch the browser$")
+	public void the_user_launch_the_browser() throws Throwable {
 		driver = launchApp("chrome");
 		loginpage = new LoginPage(driver);
 		logger.info("browser opens");
-
 	}
 
 	@When("^the user open the Saucedemo Home page$")

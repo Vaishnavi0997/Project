@@ -14,6 +14,8 @@ import cucumber.api.junit.Cucumber;
 		monochrome = true
 		)
 
-public class VerifyRunner  {
+
+public class ContinueShoppingRunner {
+	
 
 }

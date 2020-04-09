@@ -22,8 +22,8 @@ public class PriceRangeStepdef extends BasePage {
 	LoginPage loginpage = null;
 	SelectPriceRange range;
 
-	@Given("^TC02 the user launch the chrome application$")
-	public void tc02_the_user_launch_the_chrome_application() throws Throwable {
+	@Given("^TC02 the user launch the browser$")
+	public void the_user_launch_the_browser() throws Throwable {
 		driver = launchApp("firefox");
 		loginpage = new LoginPage(driver);
 		range = new SelectPriceRange(driver);

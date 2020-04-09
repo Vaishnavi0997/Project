@@ -10,6 +10,7 @@ import com.cts.pages.LogoutPage;
 import com.cts.utility.Excelllogin;
 import com.cts.utility.Screenshot;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,8 +23,8 @@ public class LogoutStepdef extends BasePage {
 	LoginPage loginpage = null;
 	LogoutPage logoutpage;
 
-	@Given("^TC06 the user launch the chrome application$")
-	public void tc06_the_user_launch_the_chrome_application() throws Throwable {
+	@Given("^TC06 the user launch the browser$")
+	public void the_user_launch_the_browser() throws Throwable {
 		driver = launchApp("firefox");
 		loginpage = new LoginPage(driver);
 		logoutpage = new LogoutPage(driver);
@@ -59,7 +60,7 @@ public class LogoutStepdef extends BasePage {
 
 	}
 
-	@Then("^TC06 user click on Logout$")
+	@And("^TC06 user click on Logout$")
 	public void tc06_user_click_on_logout() throws Throwable {
 		logoutpage.clickLogout();
 		Screenshot util = new Screenshot(driver);
@@ -68,4 +69,11 @@ public class LogoutStepdef extends BasePage {
 		driver.close();
 	}
 
+	/*
+	 * @Then("^TC06 user click on Logout$") public void tc06_user_click_on_logout()
+	 * throws Throwable { logoutpage.clickLogout(); Screenshot util = new
+	 * Screenshot(driver);
+	 * util.takeSnapShot("src/test/resources/Screenshot/Logout.png");
+	 * logger.error("browser is closed"); driver.close(); }
+	 */
 }

@@ -12,7 +12,7 @@ import com.cts.Baseclass.BasePage;
 public class SelectProductPage extends BasePage {
 
 	WebDriver driver = null;
-	@FindBy(xpath = "/html/body/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/a/div")
+	@FindBy(xpath="//*[@id=\'item_1_title_link\']/div")
 	WebElement product;
 	@FindBy(xpath = "//*[@id=\'inventory_item_container\']/div/div/div/button")
 	WebElement addcart;
